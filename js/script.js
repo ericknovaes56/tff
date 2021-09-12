@@ -106,4 +106,7 @@ document.getElementById("clo").addEventListener("click" , function(){
         n2.style.display="none"
     });
 })
+window.addEventListener("load", function(){
+    document.getElementById("lodi").style.display="none"
+})
 

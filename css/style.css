@@ -270,6 +270,50 @@ body::-webkit-scrollbar-thumb{
 .i4{
     display: none;
 }
+.lodi{
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.span{
+    width: 150px;
+    height: 150px;
+    border: 10px solid cyan;
+    border-left: 6px solid rgba(70, 131, 180, 0);
+    border-right: 6px solid rgba(70, 131, 180, 0);
+    border-top: 6px solid rgba(70, 131, 180, 0);
+    border-radius: 50%;
+    animation: erick 2s infinite linear;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.span1{
+    width: 140px;
+    height: 140px;
+    border: 16px solid rgb(44, 49, 49);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+@keyframes erick{
+    to{
+        transform: rotate(360deg);
+    }
+}
 @media (max-width:1125px){
     .p{
         font-size: 25px;
