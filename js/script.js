@@ -1,3 +1,6 @@
+window.addEventListener("load", function(){
+    document.getElementById("load").style.display="none"
+})
 document.getElementById("a1").addEventListener("click", function(){
     document.getElementById("a1").classList.add("active")
     document.getElementById("a2").classList.remove("active")
@@ -17,6 +20,23 @@ document.getElementById("a3").addEventListener("click", function(){
     document.getElementById("a3").classList.add("active")
     document.getElementById("a2").classList.remove("active")
     document.getElementById("a1").classList.remove("active")
+
+})
+document.getElementById("a21").addEventListener("click", function(){
+    document.getElementById("a21").classList.add("active")
+    document.getElementById("a22").classList.remove("active")
+    document.getElementById("a23").classList.remove("active")
+})
+document.getElementById("a22").addEventListener("click", function(){
+    document.getElementById("a22").classList.add("active")
+    document.getElementById("a23").classList.remove("active")
+    document.getElementById("a21").classList.remove("active")
+})
+
+document.getElementById("a23").addEventListener("click", function(){
+    document.getElementById("a23").classList.add("active")
+    document.getElementById("a22").classList.remove("active")
+    document.getElementById("a21").classList.remove("active")
 
 })
 window.addEventListener("scroll", function(){
@@ -55,6 +75,21 @@ window.addEventListener("scroll", function(){
         document.getElementById("a1").classList.remove("active")
         document.getElementById("a2").classList.remove("active")
     }
+    if (document.documentElement.scrollTop <= 50){
+        document.getElementById("a21").classList.add("active")
+        document.getElementById("a22").classList.remove("active")
+        document.getElementById("a23").classList.remove("active")
+    }
+    if (document.documentElement.scrollTop >= l2 - 300){
+        document.getElementById("a22").classList.add("active")
+        document.getElementById("a21").classList.remove("active")
+        document.getElementById("a23").classList.remove("active")
+    }
+    if (document.documentElement.scrollTop >= l4 + 600){
+        document.getElementById("a23").classList.add("active")
+        document.getElementById("a21").classList.remove("active")
+        document.getElementById("a22").classList.remove("active")
+    }
     const m1 = document.getElementById("body")
     const m2 = m1.getBoundingClientRect().bottom
     if(document.documentElement.scrollTop >= m2){
@@ -62,25 +97,6 @@ window.addEventListener("scroll", function(){
     }
     else{
         document.querySelector(".mi1").classList.remove("active1")
-    }
-    if (document.documentElement.scrollTop <= 50){
-        document.getElementById("a21").classList.add("active")
-        document.getElementById("a22").classList.remove("active")
-        document.getElementById("a23").classList.remove("active")
-    }
-    const l21=document.getElementById("sobre")
-    const l22 = l21.getBoundingClientRect().top
-    if (document.documentElement.scrollTop >= l22 - 300){
-        document.getElementById("a22").classList.add("active")
-        document.getElementById("a21").classList.remove("active")
-        document.getElementById("a23").classList.remove("active")
-    }
-    const l23=document.getElementById("regras")
-    const l24 = l23.getBoundingClientRect().top
-    if (document.documentElement.scrollTop >= l24 + 600){
-        document.getElementById("a23").classList.add("active")
-        document.getElementById("a21").classList.remove("active")
-        document.getElementById("a22").classList.remove("active")
     }
 })
 
@@ -106,7 +122,3 @@ document.getElementById("clo").addEventListener("click" , function(){
         n2.style.display="none"
     });
 })
-window.addEventListener("load", function(){
-    document.getElementById("lodi").style.display="none"
-})
-
